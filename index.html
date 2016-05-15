@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Moestuin JS app</title>
+	<!-- <link rel="stylesheet" href="css/style.css"> -->
+	<style>
+	.panel {
+		border-radius: 5px;
+		width: 100%;
+		height: 100%;
+	}
+	.month {
+	    position: absolute;
+	    left: -200px;
+	}
+
+	.box {
+	    background-color: #ddd;
+	    float: left;
+	    height: 300px;
+	    margin: 20px 20px 20px 0;
+	    position: relative;
+	    width: 300px;
+	}
+
+	.box:first-child, 
+	.box:last-child {
+		top: 320px;
+	}
+
+	.box:first-child {
+		left: 320px;
+	}
+
+	.box:last-child {
+		right: 320px;
+	}
+	
+	.cell {
+		width: 33.3%;
+		height: 33.3%;
+		border: 1px pink solid;
+		float: left;
+		box-sizing: border-box;
+	}
+	.heading {
+		position: absolute;
+    	top: -40px;
+	}
+
+	</style>
+</head>
+
+<body>
+	<h1>Moestuin</h1>
+
+	<div class="month m_1">
+<!-- 		<h3>January</h3> -->
+		<div class="box b_1">
+			<div class="heading">
+				<h3>Simsa 1</h3>
+			</div>
+			<span class="cell c_1"></span>
+			<span class="cell c_2"></span>
+			<span class="cell c_3"></span>
+			<span class="cell c_4"></span>
+			<span class="cell c_5"></span>
+			<span class="cell c_6"></span>
+			<span class="cell c_7"></span>
+			<span class="cell c_8"></span>
+			<span class="cell c_9"></span>
+		</div>
+		<div class="box b_2">
+			<div class="heading">
+				<h3>Simsa 2</h3>
+			</div>
+			<span class="cell c_1">2</span>
+			<span class="cell c_2"></span>
+			<span class="cell c_3"></span>
+			<span class="cell c_4"></span>
+			<span class="cell c_5"></span>
+			<span class="cell c_6"></span>
+			<span class="cell c_7"></span>
+			<span class="cell c_8"></span>
+			<span class="cell c_9"></span>
+		</div>
+		<div class="box b_3">
+			<div class="heading">
+				<h3>Simsa 3</h3>
+			</div>
+			<span class="cell c_1">3</span>
+			<span class="cell c_2"></span>
+			<span class="cell c_3"></span>
+			<span class="cell c_4"></span>
+			<span class="cell c_5"></span>
+			<span class="cell c_6"></span>
+			<span class="cell c_7"></span>
+			<span class="cell c_8"></span>
+			<span class="cell c_9"></span>
+		</div>
+		<div class="box b_4">
+			<div class="heading">
+				<h3>Simsa 4</h3>
+			</div>
+			<span class="cell c_1">4</span>
+			<span class="cell c_2"></span>
+			<span class="cell c_3"></span>
+			<span class="cell c_4"></span>
+			<span class="cell c_5"></span>
+			<span class="cell c_6"></span>
+			<span class="cell c_7"></span>
+			<span class="cell c_8"></span>
+			<span class="cell c_9"></span>
+		</div>
+		<div class="box b_5">
+			<div class="heading">
+				<h3>Simsa 5</h3>
+			</div>
+			<span class="cell c_1">5</span>
+			<span class="cell c_2"></span>
+			<span class="cell c_3"></span>
+			<span class="cell c_4"></span>
+			<span class="cell c_5"></span>
+			<span class="cell c_6"></span>
+			<span class="cell c_7"></span>
+			<span class="cell c_8"></span>
+			<span class="cell c_9"></span>
+		</div>
+		<div class="box b_6">
+			<div class="heading">
+				<h3>Simsa 6</h3>
+			</div>
+			<span class="cell c_1">6</span>
+			<span class="cell c_2"></span>
+			<span class="cell c_3"></span>
+			<span class="cell c_4"></span>
+			<span class="cell c_5"></span>
+			<span class="cell c_6"></span>
+			<span class="cell c_7"></span>
+			<span class="cell c_8"></span>
+			<span class="cell c_9"></span>
+		</div>
+
+	</div>
+
+
+
+	<script src="js/jquery-2.2.3.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		$(function() {
+			var p = new SIMSA.commonMethod.createPanel(400, 400);
+			var p2 = new SIMSA.commonMethod.createPanel(100, 100, "red", $(".b_1 > .c_1"));
+			var p3 = new SIMSA.commonMethod.createPanel(100, 100, "blue", $(".b_5 > .c_8"));
+			var p4 = new SIMSA.commonMethod.createPanel(100, 100, "pink", $(".b_3 > .c_5"));
+			var p5 = new SIMSA.commonMethod.createPanel(100, 100, "yellow", $(".b_4 > .c_8"));
+			var p6 = new SIMSA.commonMethod.createPanel(100, 100, "green", $(".b_4 > .c_8"));
+
+			p5.addContent("Hello");
+
+			console.log(p5);
+		});
+
+	</script>
+
+</body>
+</html>
